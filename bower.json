@@ -1,0 +1,25 @@
+{
+  "name": "pixel-admin-base-scss",
+  "version": "0.0.0",
+  "authors": [
+    "Ryan Eballar <ryeballar@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": [
+	"_pixel-admin",
+	"_widgets",
+	"_pages",
+	"_rtl",
+	"_themes"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.4"
+  }
+}
