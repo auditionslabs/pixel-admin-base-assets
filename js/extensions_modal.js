@@ -51,7 +51,21 @@
           return blurOff();
         }
       });
-    } else {
+    }
+    else if (this.$element.hasClass('modal-blur')) {
+      $('body').append(this.$element);
+      if (getScreenSize($('#small-screen-width-point'), $('#tablet-screen-width-point')) === 'desktop') {
+        blurOn();
+      }
+      return $(window).on('pa.resize.modal_blur', function() {
+        if (getScreenSize($('#small-screen-width-point'), $('#tablet-screen-width-point')) === 'desktop') {
+          return blurOn();
+        } else {
+          return blurOff();
+        }
+      });
+    }
+    else {
       return blurOff();
     }
   };
