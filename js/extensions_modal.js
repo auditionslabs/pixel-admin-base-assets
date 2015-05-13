@@ -39,7 +39,20 @@
 
   $.fn.modal.Constructor.prototype.show = function() {
     modal_show.call(this);
-    if (this.$element.hasClass('modal-blur')) {
+    if (this.$element.hasClass('modal-alert')) {
+      $('body').append(this.$element);
+      if (getScreenSize($('#small-screen-width-point'), $('#tablet-screen-width-point')) === 'desktop') {
+        blurOn();
+      }
+      return $(window).on('pa.resize.modal_alert', function() {
+        if (getScreenSize($('#small-screen-width-point'), $('#tablet-screen-width-point')) === 'desktop') {
+          return blurOn();
+        } else {
+          return blurOff();
+        }
+      });
+    } 
+    else if (this.$element.hasClass('modal-blur')) {
       $('body').append(this.$element);
       if (getScreenSize($('#small-screen-width-point'), $('#tablet-screen-width-point')) === 'desktop') {
         blurOn();
@@ -51,7 +64,8 @@
           return blurOff();
         }
       });
-    } else {
+    }
+    else {
       return blurOff();
     }
   };
