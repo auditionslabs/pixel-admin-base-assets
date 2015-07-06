@@ -33,6 +33,7 @@
 	"js/plugins_rating.js",
 	"js/pixel-slimscroll.js",
 	"js/plugins_flot.js",
+	"js/extensions_modal.js",
 	"js/extensions_bootstrap-datepicker.js",
 	"js/extensions_bootstrap-timepicker.js",
 	"js/extensions_bootstrap-datepaginator.js",
