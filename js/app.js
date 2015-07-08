@@ -38,7 +38,7 @@
 
   /*
    * Start application. Method takes an array of initializers and a settings object(that overrides default settings).
-   * 
+   *
    * @param  {Array} suffix
    * @param  {Object} settings
    * @return this
@@ -59,7 +59,7 @@
           $.merge(_this.init, init);
         }
         _this.settings = $.extend(true, {}, SETTINGS_DEFAULTS, settings || {});
-        _this.settings.is_mobile = /iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase());
+        _this.settings.is_mobile = /android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase());
         if (_this.settings.is_mobile) {
           if (FastClick) {
             FastClick.attach(document.body);
@@ -80,7 +80,7 @@
 
   /*
    * Add initializer to the stack.
-   * 
+   *
    * @param  {Function} callback
    */
 
@@ -91,7 +91,7 @@
 
   /*
    * Initialize plugin and add it to the plugins list.
-   * 
+   *
    * @param  {String} plugin_name
    * @param  {Instance} plugin
    */
@@ -106,7 +106,7 @@
 
   /*
    * Save value in the localStorage/Cookies.
-   * 
+   *
    * @param  {String}  key
    * @param  {String}  value
    * @param  {Boolean} use_cookies
@@ -132,7 +132,7 @@
 
   /*
    * Save key/value pairs in the localStorage/Cookies.
-   * 
+   *
    * @param  {Object} pairs
    * @param  {Boolean} use_cookies
    */
@@ -165,7 +165,7 @@
 
   /*
    * Get value from the localStorage/Cookies.
-   * 
+   *
    * @param  {String} key
    * @param  {Boolean} use_cookies
    */
@@ -203,7 +203,7 @@
 
   /*
    * Get values from the localStorage/Cookies.
-   * 
+   *
    * @param  {Array} keys
    * @param  {Boolean} use_cookies
    */
